@@ -1,5 +1,0 @@
-{
-    "python.linting.enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.pythonPath": "/Users/corybell/.local/share/virtualenvs/pi-time-data-_DJAsqYD/bin/python",
-}
