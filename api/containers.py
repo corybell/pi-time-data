@@ -1,16 +1,15 @@
 from dependency_injector import containers
 from dependency_injector import containers, providers
-from services.timer_service import TimerService
-from services.relay_service import RelayService
+from services import relay, timer
 
 class Container(containers.DeclarativeContainer):
   config = providers.Configuration()
 
   timer_service = providers.Factory(
-    TimerService,
+    timer.TimerService,
   )
 
   relay_service = providers.Factory(
-    RelayService,
+    relay.RelayService,
   )
     
