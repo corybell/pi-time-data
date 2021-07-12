@@ -1,5 +1,5 @@
 {
-  "hr": [
+  "hour": [
     {
       "value": "*",
       "label": "Always on"
@@ -57,7 +57,7 @@
       "label": "Every 12 hours"
     }
   ],
-  "min": [
+  "minute": [
     {
       "value": "*",
       "label": "Always on"
