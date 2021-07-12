@@ -4,13 +4,13 @@ from services.timer_service import TimerService
 from services.relay_service import RelayService
 
 class Container(containers.DeclarativeContainer):
-    config = providers.Configuration()
+  config = providers.Configuration()
 
-    timer_service = providers.Factory(
-        TimerService,
-    )
+  timer_service = providers.Factory(
+    TimerService,
+  )
 
-    relay_service = providers.Factory(
-        RelayService,
-    )
+  relay_service = providers.Factory(
+    RelayService,
+  )
     
