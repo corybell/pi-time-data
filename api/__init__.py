@@ -1,12 +1,20 @@
-import flask
+from flask import Flask
 from flask_cors import CORS
 from dotenv import load_dotenv
-from api.blueprints import register_blueprints
+from .containers import Container
+from .blueprints import health_check, relay, timer
 
 load_dotenv()
 
-app = flask.Flask(__name__)
-
-CORS(app)
-
-register_blueprints(app)
+def create_app() -> Flask:
+    container = Container()
+    container.wire(modules=[relay, timer])
+    
+    app = Flask(__name__)
+    app.container = container
+    CORS(app)
+    
+    app.register_blueprint(health_check.blueprint)
+    app.register_blueprint(timer.blueprint)
+    app.register_blueprint(relay.blueprint)
+    return app

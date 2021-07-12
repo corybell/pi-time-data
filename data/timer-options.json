@@ -1,0 +1,110 @@
+{
+  "hr": [
+    {
+      "value": "*",
+      "label": "Always on"
+    },
+    {
+      "value": "two",
+      "label": "2 hours continuously"
+    },
+    {
+      "value": "four",
+      "label": "4 hours continuously"
+    },
+    {
+      "value": "eight",
+      "label": "8 hours continuously"
+    },
+    {
+      "value": "twelve",
+      "label": "12 hours continuously"
+    },
+    {
+      "value": "sixteen",
+      "label": "16 hours continuously"
+    },
+    {
+      "value": "eighteen",
+      "label": "18 hours continuously"
+    },
+    {
+      "value": "twenty",
+      "label": "20 hours continuously"
+    },
+    {
+      "value": "everyTwo",
+      "label": "Every 2 hours"
+    },
+    {
+      "value": "everyThree",
+      "label": "Every 3 hours"
+    },
+    {
+      "value": "everyFour",
+      "label": "Every 4 hours"
+    },
+    {
+      "value": "everySix",
+      "label": "Every 6 hours"
+    },
+    {
+      "value": "everyEight",
+      "label": "Every 8 hours"
+    },
+    {
+      "value": "everyTwelve",
+      "label": "Every 12 hours"
+    }
+  ],
+  "min": [
+    {
+      "value": "*",
+      "label": "Always on"
+    },
+    {
+      "value": "one",
+      "label": "1 minute"
+    },
+    {
+      "value": "two",
+      "label": "2 minutes"
+    },
+    {
+      "value": "three",
+      "label": "3 minutes"
+    },
+    {
+      "value": "five",
+      "label": "5 minutes"
+    },
+    {
+      "value": "ten",
+      "label": "10 minutes"
+    },
+    {
+      "value": "fifteen",
+      "label": "15 minutes"
+    },
+    {
+      "value": "twenty",
+      "label": "20 minutes"
+    },
+    {
+      "value": "thirty",
+      "label": "30 minutes"
+    },
+    {
+      "value": "toggleFive",
+      "label": "5 on / 5 off"
+    },
+    {
+      "value": "toggleTen",
+      "label": "10 on / 10 off"
+    },
+    {
+      "value": "toggleFifteen",
+      "label": "15 on / 15 off"
+    }
+  ]
+}
