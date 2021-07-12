@@ -9,10 +9,6 @@ def create_app() -> Flask:
   load_dotenv()
 
   container = Container()
-  container.config = providers.Configuration()
-  container.config.host.from_env('API_HOST')
-  container.config.port.from_env('API_PORT')
-
   container.wire(modules=[health_check, relay, timer])
   
   app = Flask(__name__)

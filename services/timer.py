@@ -1,16 +1,8 @@
 from util import read_file
-import logging
-
-logging.basicConfig(level=logging.INFO)
-log = logging.getLogger(__name__)
-
-OPTIONS_DATA_FILE = 'data/timer-options.json'
 
 class TimerService():
-  def __init__(self):
-    pass
+  def __init__(self, option_file: str):
+    self._option_file = option_file
 
   def all(self):
-    return read_file(OPTIONS_DATA_FILE)
-  
-
+    return read_file(self._option_file)

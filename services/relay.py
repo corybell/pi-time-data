@@ -1,15 +1,11 @@
 from util import read_file, write_file, get_str
 
-DATA_FILE = 'data/relay.json'
-
 class RelayService():
-  """ Relay data access """
-  
-  def __init__(self):
-    pass
+  def __init__(self, relay_file: str):
+    self._relay_file = relay_file
 
   def all(self):
-    return read_file(DATA_FILE)
+    return read_file(self._relay_file)
 
   def get(self, id):
     return self._get(self.all(), id)
@@ -26,7 +22,7 @@ class RelayService():
     timer = payload['timer']
     relay['timer'] = timer
 
-    write_file(DATA_FILE, relays)
+    write_file(self._relay_file, relays)
     return True
 
   def _get(self, file_data: list, id):
