@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify
 from dependency_injector.providers import Configuration
 from dependency_injector.wiring import inject, Provide
-from ..containers import Container
+from api.containers import Container
 
 blueprint = Blueprint('health_check', __name__)
 

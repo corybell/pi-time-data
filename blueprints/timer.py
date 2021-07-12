@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify
 from dependency_injector.wiring import inject, Provide
 from services.timer import TimerService
-from ..containers import Container
+from api.containers import Container
 
 blueprint = Blueprint('timer', __name__)
 

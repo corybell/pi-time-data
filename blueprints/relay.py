@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from dependency_injector.wiring import inject, Provide
 from services.relay import RelayService
-from ..containers import Container
+from api.containers import Container
 
 blueprint = Blueprint('relay', __name__)
 

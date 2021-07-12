@@ -3,7 +3,7 @@ from flask import Flask
 from flask_cors import CORS
 from dotenv import load_dotenv
 from .containers import Container
-from .blueprints import health_check, relay, timer
+from blueprints import health_check, relay, timer
 
 def create_app() -> Flask:
   load_dotenv()
