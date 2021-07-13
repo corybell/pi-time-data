@@ -7,14 +7,14 @@ class RelayService():
   def all(self):
     return read_file(self._relay_file)
 
-  def get(self, id):
+  def get(self, id: str):
     return self._get(self.all(), id)
 
-  def edit(self, id, payload):
+  def edit(self, id: str, payload: dict):
     relays = self.all()
     relay = self._get(relays, id)
     if not relay:
-      return False
+      return None
 
     name = get_str(payload, 'name')
     relay['name'] = name
@@ -23,10 +23,9 @@ class RelayService():
     relay['timer'] = timer
 
     write_file(self._relay_file, relays)
-    return True
+    return relay
 
-  def _get(self, file_data: list, id):
+  def _get(self, file_data: list, id: str):
     for d in file_data:
-      if d["id"] == id: return d
-
+      if d['id'] == id: return d
     return None

@@ -5,33 +5,31 @@ from app.container import AppContainer
 
 blueprint = Blueprint('relay', __name__)
 
-known_relays = ['1', '2', '3', '4', '5', '6', '7', '8']
-known_commands = ['on', 'off']
-
 @blueprint.route('/relay', methods=['GET'])
 @inject
 def relay_list(relay_service: RelayService = Provide[AppContainer.relay_service]):
   relays = relay_service.all()
+  
   return jsonify(relays), 200
 
-@blueprint.route('/relay/<string:relay_id>', methods=['GET'])
+@blueprint.route('/relay/<string:id>', methods=['GET'])
 @inject
-def relay_get(relay_id: str, relay_service: RelayService = Provide[AppContainer.relay_service]):
-  if relay_id not in known_relays:
-    return jsonify(message='relay not found'), 404
-
-  relay = relay_service.get(relay_id)
+def relay_get(id: str, relay_service: RelayService = Provide[AppContainer.relay_service]):
+  relay = relay_service.get(id)
+  if not relay:
+    return jsonify({}), 404
+  
   return jsonify(relay), 200
 
-@blueprint.route('/relay/<string:relay_id>', methods=['PUT'])
+@blueprint.route('/relay/<string:id>', methods=['PUT'])
 @inject
-def relay_edit(relay_id: str, relay_service: RelayService = Provide[AppContainer.relay_service]):
-  if relay_id not in known_relays:
-    return jsonify(message='relay not found'), 404
-
+def relay_edit(id: str, relay_service: RelayService = Provide[AppContainer.relay_service]):
   payload = request.get_json()
-  status = relay_service.edit(relay_id, payload)
-  if not status:
+  if not payload:
     return jsonify({}), 400
+
+  relay = relay_service.edit(id, payload)
+  if not relay:
+    return jsonify({}), 404
   
-  return jsonify({}), 200
+  return jsonify(relay), 200

@@ -1,4 +1,3 @@
-import logging
 from dependency_injector import providers
 from flask import Flask
 from flask_cors import CORS
