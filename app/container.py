@@ -1,6 +1,6 @@
 from dependency_injector import containers
 from dependency_injector import containers, providers
-from services import relay, option
+from services import relay, option, hour
 
 class AppContainer(containers.DeclarativeContainer):
   config = providers.Configuration()
@@ -19,5 +19,10 @@ class AppContainer(containers.DeclarativeContainer):
   relay_service = providers.Factory(
     relay.RelayService,
     relay_file=config.relay_data_file
+  )
+
+  hour_service = providers.Factory(
+    hour.HourService,
+    hour_file=config.hour_data_file
   )
     

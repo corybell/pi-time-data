@@ -1,5 +1,8 @@
 from json import load, dump
-from uuid import uuid4
+from sys import stdout
+
+def debug_log(msg: str):
+  print(msg, file=stdout)
 
 def get_str(payload, key):
   val = payload.get(key)
