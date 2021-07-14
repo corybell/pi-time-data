@@ -1,13 +1,10 @@
 from dependency_injector import providers
 from flask import Flask
 from flask_cors import CORS
-from dotenv import load_dotenv
 from .container import AppContainer
 from blueprints import health_check, relay, option, hour, minute
 
 def create_app() -> Flask:
-  load_dotenv()
-
   container = AppContainer()
   container.wire(modules=[health_check, relay, option, hour, minute])
   
