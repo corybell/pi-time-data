@@ -1,6 +1,9 @@
 .venv
 .eggs
-__pycache__
 .pytest_cache
 .DS_Store
+
+__pycache__
+
 app/version.py
+data/relay.json
