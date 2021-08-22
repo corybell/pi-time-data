@@ -1,6 +1,14 @@
 from json import load, dump
 from sys import stdout
 
+def collection_to_dict(data):
+  new_dict = {}
+  for item in data:
+    value = item.get('value')
+    label = item.get('label')
+    new_dict[value] = label
+  return new_dict
+
 def debug_log(msg: str):
   print(msg, file=stdout)
 
