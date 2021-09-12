@@ -13,7 +13,7 @@ def hydrate(
     option_service: OptionService = Provide[AppContainer.option_service]
   ):
   
-  relays = relay_service.all()
+  relays = relay_service.all_active()
 
   all_options = option_service.all()
 
