@@ -5,10 +5,10 @@ python3 | pip3 | pipenv | flask | pytest
 `pipenv install`
 
 ## WEB SERVER
-`pipenv run ./start.sh`
+`pipenv run ./scripts/start.sh`
 
 ## TESTS
-`pipenv run ./test.sh`
+`pipenv run ./scripts/test.sh`
 
 ## HEALTH CHECK
 http://localhost:5000/api/health-check
