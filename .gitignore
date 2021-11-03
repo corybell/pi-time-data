@@ -5,4 +5,5 @@
 
 __pycache__
 
+app/version.py
 data/relay.json
