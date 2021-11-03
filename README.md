@@ -10,6 +10,9 @@ python3 | pip3 | pipenv | flask | pytest
 ## TESTS
 `pipenv run ./scripts/test.sh`
 
+## BUILD (generates app/version.py)
+`pipenv run ./build/test.sh`
+
 ## HEALTH CHECK
 http://localhost:5000/api/health-check
 
