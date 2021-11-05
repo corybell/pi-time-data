@@ -7,8 +7,8 @@ def build_relay(r: int):
       'id': '1',
       'name': 'Primary Lights',
       'timer': {
-        'hr': 'eighteen',
-        'min': '*'
+        'hr': '*',
+        'min': 'toggleOne'
       }
     }
 
