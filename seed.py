@@ -5,6 +5,7 @@ def build_relay(r: int):
   if r == 0:
     return {
       'id': '1',
+      'active': True,
       'name': 'Primary Lights',
       'timer': {
         'hr': '*',
@@ -14,6 +15,7 @@ def build_relay(r: int):
 
   return {
     'id': str(r + 1),
+    'active': True,
     'name': '',
     'timer': None
   }

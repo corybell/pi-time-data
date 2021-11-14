@@ -95,6 +95,10 @@
       "label": "30 minutes"
     },
     {
+      "value": "toggleOne",
+      "label": "1 on / 1 off"
+    },
+    {
       "value": "toggleFive",
       "label": "5 on / 5 off"
     },
