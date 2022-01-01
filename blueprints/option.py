@@ -5,7 +5,7 @@ from app.container import AppContainer
 
 blueprint = Blueprint('option', __name__)
 
-@blueprint.route('/option', methods=['GET'])
+@blueprint.route('/option', methods=['GET', 'OPTIONS'])
 @inject
 def option_list(option_service: OptionService = Provide[AppContainer.option_service]):
   options = option_service.all()

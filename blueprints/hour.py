@@ -5,7 +5,7 @@ from app.container import AppContainer
 
 blueprint = Blueprint('hour', __name__)
 
-@blueprint.route('/hour/<string:id>', methods=['GET'])
+@blueprint.route('/hour/<string:id>', methods=['GET', 'OPTIONS'])
 @inject
 def hour_get(id: str, hour_service: HourService = Provide[AppContainer.hour_service]):
   hour = hour_service.get(id)
