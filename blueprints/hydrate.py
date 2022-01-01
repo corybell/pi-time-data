@@ -6,7 +6,7 @@ from app.container import AppContainer
 
 blueprint = Blueprint('hydrate', __name__)
 
-@blueprint.route('/hydrate', methods=['GET', 'OPTIONS'])
+@blueprint.route('/hydrate', methods=['GET'])
 @inject
 def hydrate(
     relay_service: RelayService = Provide[AppContainer.relay_service],
